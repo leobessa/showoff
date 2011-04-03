@@ -1,7 +1,6 @@
-require './lib/version'
 Gem::Specification.new do |s|
   s.name              = "showoff"
-  s.version           = ShowOff::Version
+  s.version           = File.read(File.join(File.dirname(__FILE__),'VERSION')).chomp
   s.date              = "2010-08-17"
   s.summary           = "The best damn presentation software a developer could ever love."
   s.homepage          = "http://github.com/schacon/showoff"

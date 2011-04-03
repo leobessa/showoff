@@ -1,11 +1,11 @@
 require 'rubygems'
+require 'bundler/setup'
 require 'sinatra/base'
 require 'json'
 require 'nokogiri'
 require 'showoff_utils'
 require 'princely'
 require 'fileutils'
-require 'version'
 
 begin
   require 'RMagick'
@@ -29,6 +29,8 @@ end
 require 'pp'
 
 class ShowOff < Sinatra::Application
+
+  VERSION = Version = File.read(File.join(File.dirname(__FILE__),'..','VERSION')).chomp
 
   attr_reader :cached_image_size
 
