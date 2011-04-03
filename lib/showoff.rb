@@ -5,6 +5,7 @@ require 'nokogiri'
 require 'showoff_utils'
 require 'princely'
 require 'fileutils'
+require 'version'
 
 begin
   require 'RMagick'
@@ -28,8 +29,6 @@ end
 require 'pp'
 
 class ShowOff < Sinatra::Application
-
-  Version = VERSION = '0.4.0'
 
   attr_reader :cached_image_size
 
